@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "691500798364",
+    "project_id": "hellhot-100",
+    "storage_bucket": "hellhot-100.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:691500798364:android:bb8877b36b70889fbe3859",
+        "android_client_info": {
+          "package_name": "jp.co.mixi.monsterstr"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlgo1yDOVdBHC31EtoAaiqnhTwMG8QZRk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
