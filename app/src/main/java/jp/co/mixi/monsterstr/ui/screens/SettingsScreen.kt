@@ -6,6 +6,7 @@ import android.webkit.WebViewClient
 import android.widget.FrameLayout
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -35,6 +36,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.unit.dp
@@ -247,6 +249,7 @@ private fun InfoDialog(
     Box(
         modifier = Modifier
             .fillMaxSize()
+            .pointerInput(Unit) { detectTapGestures { /* consume taps */ } }
             .background(Color.Black.copy(alpha = 0.7f)),
         contentAlignment = Alignment.Center,
     ) {
@@ -311,6 +314,7 @@ private fun PrivacyDialog(
     Box(
         modifier = Modifier
             .fillMaxSize()
+            .pointerInput(Unit) { detectTapGestures { /* consume taps */ } }
             .background(Color.Black.copy(alpha = 0.7f)),
         contentAlignment = Alignment.Center,
     ) {

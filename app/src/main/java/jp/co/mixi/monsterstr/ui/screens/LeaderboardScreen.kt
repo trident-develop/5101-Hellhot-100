@@ -1,7 +1,6 @@
 package jp.co.mixi.monsterstr.ui.screens
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -14,16 +13,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -35,11 +31,8 @@ import jp.co.mixi.monsterstr.ui.common.LocalPrefs
 import jp.co.mixi.monsterstr.ui.theme.JokerCardEdge
 import jp.co.mixi.monsterstr.ui.theme.JokerGold
 import jp.co.mixi.monsterstr.ui.theme.JokerGreen
-import jp.co.mixi.monsterstr.ui.theme.JokerInk
 import jp.co.mixi.monsterstr.ui.theme.JokerOnSurface
 import jp.co.mixi.monsterstr.ui.theme.JokerPurple
-import jp.co.mixi.monsterstr.ui.theme.JokerPurpleDeep
-import jp.co.mixi.monsterstr.ui.theme.JokerPurpleNight
 import jp.co.mixi.monsterstr.ui.theme.JokerRed
 
 @Composable
@@ -112,12 +105,7 @@ fun LeaderboardScreen(onBack: () -> Unit) {
                 Box(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .weight(1f)
-                        .clip(RoundedCornerShape(20.dp))
-                        .background(
-                            Brush.verticalGradient(listOf(JokerPurpleDeep, JokerInk))
-                        )
-                        .border(1.5.dp, JokerCardEdge, RoundedCornerShape(20.dp)),
+                        .weight(1f),
                     contentAlignment = Alignment.Center,
                 ) {
                     Text(
@@ -132,13 +120,16 @@ fun LeaderboardScreen(onBack: () -> Unit) {
                     modifier = Modifier
                         .fillMaxWidth()
                         .weight(1f),
-                    verticalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
                     items(top) { entry ->
                         ScoreRow(
                             rank = top.indexOf(entry) + 1,
                             level = entry.first,
                             score = entry.second,
+                        )
+                        HorizontalDivider(
+                            color = JokerCardEdge.copy(alpha = 0.35f),
+                            thickness = 0.6.dp,
                         )
                     }
                 }
@@ -164,19 +155,7 @@ private fun StatCard(
     modifier: Modifier = Modifier,
 ) {
     Column(
-        modifier = modifier
-            .shadow(
-                elevation = 8.dp,
-                shape = RoundedCornerShape(18.dp),
-                ambientColor = accent,
-                spotColor = accent,
-            )
-            .clip(RoundedCornerShape(18.dp))
-            .background(
-                Brush.verticalGradient(listOf(JokerPurpleDeep, JokerPurpleNight))
-            )
-            .border(1.5.dp, accent.copy(alpha = 0.7f), RoundedCornerShape(18.dp))
-            .padding(horizontal = 12.dp, vertical = 14.dp),
+        modifier = modifier.padding(horizontal = 4.dp, vertical = 6.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Text(
@@ -187,12 +166,20 @@ private fun StatCard(
                 letterSpacing = 2.sp,
             ),
         )
+        Spacer(modifier = Modifier.height(4.dp))
         Text(
             text = value,
             style = MaterialTheme.typography.headlineMedium.copy(
                 color = JokerOnSurface,
                 fontSize = 22.sp,
             ),
+        )
+        Spacer(modifier = Modifier.height(6.dp))
+        Box(
+            modifier = Modifier
+                .width(28.dp)
+                .height(2.dp)
+                .background(accent.copy(alpha = 0.7f)),
         )
     }
 }
@@ -203,23 +190,12 @@ private fun ScoreRow(rank: Int, level: Int, score: Int) {
         1 -> JokerGold
         2 -> JokerGreen
         3 -> JokerPurple
-        else -> JokerCardEdge
+        else -> JokerOnSurface.copy(alpha = 0.6f)
     }
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .shadow(
-                elevation = 6.dp,
-                shape = RoundedCornerShape(16.dp),
-                ambientColor = accent,
-                spotColor = accent,
-            )
-            .clip(RoundedCornerShape(16.dp))
-            .background(
-                Brush.horizontalGradient(listOf(JokerPurpleDeep, JokerInk))
-            )
-            .border(1.dp, accent, RoundedCornerShape(16.dp))
-            .padding(horizontal = 16.dp, vertical = 12.dp),
+            .padding(horizontal = 4.dp, vertical = 12.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween,
     ) {
