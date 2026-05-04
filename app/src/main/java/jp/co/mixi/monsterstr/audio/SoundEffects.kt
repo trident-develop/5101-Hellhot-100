@@ -3,7 +3,7 @@ package jp.co.mixi.monsterstr.audio
 import android.content.Context
 import android.media.AudioAttributes
 import android.media.SoundPool
-import jp.co.mixi.monsterstr.R
+import ua.prom.R
 
 class SoundEffects(context: Context) {
 

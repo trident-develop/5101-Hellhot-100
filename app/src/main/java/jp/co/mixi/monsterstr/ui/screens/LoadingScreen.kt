@@ -39,7 +39,6 @@ import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import jp.co.mixi.monsterstr.R
 import jp.co.mixi.monsterstr.ui.common.JokerAnimatedBackground
 import jp.co.mixi.monsterstr.ui.common.JokerMask
 import jp.co.mixi.monsterstr.ui.common.JokerMood

@@ -34,10 +34,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import jp.co.mixi.monsterstr.R
 import jp.co.mixi.monsterstr.nav.Routes
 import jp.co.mixi.monsterstr.ui.common.JokerButton
 import jp.co.mixi.monsterstr.ui.theme.JokerFont
+import ua.prom.R
 
 @Composable
 fun ConnectScreen(navController: NavController) {

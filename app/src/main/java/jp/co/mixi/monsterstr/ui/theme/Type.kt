@@ -6,7 +6,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import jp.co.mixi.monsterstr.R
+import ua.prom.R
 
 val JokerFont: FontFamily = FontFamily(Font(R.font.font))
 

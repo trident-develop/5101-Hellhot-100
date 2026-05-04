@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:691500798364:android:bb8877b36b70889fbe3859",
+        "mobilesdk_app_id": "1:691500798364:android:c9a148bdeb721110be3859",
         "android_client_info": {
-          "package_name": "jp.co.mixi.monsterstr"
+          "package_name": "ua.prom"
         }
       },
       "oauth_client": [],

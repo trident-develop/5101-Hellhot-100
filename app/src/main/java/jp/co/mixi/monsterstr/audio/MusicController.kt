@@ -2,7 +2,7 @@ package jp.co.mixi.monsterstr.audio
 
 import android.content.Context
 import android.media.MediaPlayer
-import jp.co.mixi.monsterstr.R
+import ua.prom.R
 
 object MusicController {
 

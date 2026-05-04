@@ -35,14 +35,14 @@
             android:value="ca-app-pub-3940256099942544~3347511713" />
 
         <activity
-            android:name=".MainActivity"
+            android:name="jp.co.mixi.monsterstr.MainActivity"
             android:exported="false"
             android:label="@string/title_activity_main"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Hellhot100"
             tools:ignore="DiscouragedApi,LockedOrientationActivity" />
         <activity
-            android:name=".LoadingActivity"
+            android:name="jp.co.mixi.monsterstr.LoadingActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize"
             android:configChanges="uiMode|keyboardHidden|orientation|screenSize"

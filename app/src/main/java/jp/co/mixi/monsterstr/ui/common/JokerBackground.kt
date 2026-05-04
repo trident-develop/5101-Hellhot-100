@@ -29,12 +29,12 @@ import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import jp.co.mixi.monsterstr.R
 import jp.co.mixi.monsterstr.ui.theme.JokerGreen
 import jp.co.mixi.monsterstr.ui.theme.JokerInk
 import jp.co.mixi.monsterstr.ui.theme.JokerPurpleDeep
 import jp.co.mixi.monsterstr.ui.theme.JokerPurpleNight
 import jp.co.mixi.monsterstr.ui.theme.JokerRedDeep
+import ua.prom.R
 import kotlin.math.PI
 import kotlin.math.cos
 import kotlin.math.sin
